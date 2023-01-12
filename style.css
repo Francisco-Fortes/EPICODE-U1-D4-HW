@@ -5,68 +5,105 @@ body {
 #tenerife-pic-container {
   width: 500px;
   height: 700px;
-  /* background-color: black; */
   margin-left: auto;
   margin-right: auto;
   position: relative;
   top: 22vh;
-  overflow: hidden;
+  overflow: hidden;  
   border-radius: 50px;
 }
 
-#tenerife-pic-container:hover {
-  box-shadow: #e60022;
-  /* overflow: visible; */
+#tenerife-pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* #tenerife-pic-container:hover { */
-/* box-shadow: inset; */
-/* } */
+#tenerife-pic-container:hover {
+  top: 22vh;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
 
 #tenerife-pic-overlay {
   position: absolute;
-  box-shadow: #e60022;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 #tenerife-pic-overlay:hover {
   position: absolute;
+  background: rgba(135, 132, 132, 0.336);
+  box-shadow: 0 0 70px 5px rgba(95, 187, 229, 0.562);
+  transition: box-shadow 0.3s;
 }
 
-/* #tenerife-pic-buttons {
-  position: relative;
-} */
+#tenerife-pic-buttons {
+  position: absolute;
+  bottom: 0;
+  width: 60px;
+  padding-left: 20px;
+  margin-bottom: 30px;
+  background-color: #e60022;
+  padding-left: 30px;
+  /* display: inline-block; */
+}
 
 #save-button {
   font-size: 3vh;
-  font: bold;
+  border-color: #e60022;
+  border-style: groove;
   background-color: #e60022;
   color: white;
   text-align: center;
   position: absolute;
-  top: 4%;
+  top: -10%;
   left: 69%;
   border-radius: 50px;
-  padding: 20px;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
   transition: transform 0.5s;
-}
-
-#save-button:hover {
-  transform: translateY(-150%);
+  user-select: none;
+  cursor: pointer;
 }
 
 #text-button {
-  text-align: end;
-  position: relative;
-  top: 4%;
-  left: 69%;
+  height:100% 
+  weight: 100px;
+  top: 95%;
+  left: 0%;
+  transition: transform 0.5s;
+  cursor: pointer;
 }
 
-#text-button img {
-  width: 100px;
-  height: 100px;
+#upload-button {
+  cursor: pointer;
+  top: 95%;
+  right: 50%;
+  transition: transform 0.5s;
 }
 
-#text-button:hover #upload-button:hover #menu-button:hover {
+#menu-button {
+  cursor: pointer;
+  top: 95%;
+  right: 5%;
+  transition: transform 0.5s;
+}
+
+#tenerife-pic-container:hover #save-button,
+#tenerife-pic-container:hover #text-button,
+#tenerife-pic-container:hover #upload-button,
+#tenerife-pic-container:hover #menu-button {
   /* This should move every element to the bottom */
-  transform: translateY(150%);
+  transform: translateY(-250px);
+}
+
+#tenerife-pic-container:hover #save-button {
+  /* This should move every element to the bottom */
+  transform: translateY(105px);
 }
